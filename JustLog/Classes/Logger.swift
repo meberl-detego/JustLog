@@ -109,7 +109,7 @@ public final class Logger: NSObject {
             })
             let dispatchTimeInterval = DispatchTimeInterval.seconds(dispatchInterval)
             dispatchTimer?.schedule(deadline: DispatchTime.now(),
-                                    repeating: dispatchTimeInterval,
+                                    interval: dispatchTimeInterval,
                                     leeway: dispatchTimeInterval)
             dispatchTimer?.activate()
         }
