@@ -37,8 +37,8 @@ extension Dictionary where Key == String {
             case is Array<Any>:
                 retVal.updateValue(String(describing: v), forKey: k)
             case is NSError:
-                if let inner = v as? NSError {
-                    retVal = retVal.merged(with: inner.userInfo.flattened())
+                if let userInfo = (v as? NSError)?.userInfo as? [String: Any] {
+                    retVal = retVal.merged(with: userInfo.flattened())
                 }
                 else {
                     continue
