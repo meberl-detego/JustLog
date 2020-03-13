@@ -108,9 +108,9 @@ public final class Logger: NSObject {
                 self.cancelSending()
             })
             let dispatchTimeInterval = DispatchTimeInterval.seconds(dispatchInterval)
-            dispatchTimer?.schedule(deadline: DispatchTime.now(),
-                                    interval: dispatchTimeInterval,
-                                    leeway: dispatchTimeInterval)
+            dispatchTimer?.scheduleRepeating(deadline: DispatchTime.now(),
+                                             interval: dispatchTimeInterval,
+                                             leeway: dispatchTimeInterval)
             dispatchTimer?.activate()
         }
     }
