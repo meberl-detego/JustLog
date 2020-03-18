@@ -10,7 +10,7 @@ import Foundation
 import SwiftyBeaver
 import CocoaAsyncSocket
 
-public class LogstashDestination: BaseDestination  {
+open public class LogstashDestination: BaseDestination  {
     
     public var logzioToken: String?
     
