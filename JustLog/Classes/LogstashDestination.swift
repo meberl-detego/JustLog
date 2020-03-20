@@ -10,7 +10,7 @@ import Foundation
 import SwiftyBeaver
 import CocoaAsyncSocket
 
-open public class LogstashDestination: BaseDestination  {
+open class LogstashDestination: BaseDestination  {
     
     public var logzioToken: String?
     
@@ -45,7 +45,7 @@ open public class LogstashDestination: BaseDestination  {
     
     // MARK: - Log dispatching
 
-    override public func send(_ level: SwiftyBeaver.Level, msg: String, thread: String, file: String,
+    override open func send(_ level: SwiftyBeaver.Level, msg: String, thread: String, file: String,
                               function: String, line: Int, context: Any? = nil) -> String? {
         
         if let dict = msg.toDictionary() {
