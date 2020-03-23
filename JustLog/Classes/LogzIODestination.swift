@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import SwiftyBeaver
 
 final public class LogzIODestination: LogstashDestination {
     
