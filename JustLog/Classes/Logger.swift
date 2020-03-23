@@ -63,7 +63,7 @@ public final class Logger: NSObject {
     
     // destinations
     public var console: ConsoleDestination!
-    public var logstash: LogstashDestination!
+    public var logstash: LogzIODestination!
     public var file: FileDestination!
     
     deinit {
@@ -94,7 +94,7 @@ public final class Logger: NSObject {
         
         // logstash
         if enableLogstashLogging {
-            logstash = LogstashDestination(host: logstashHost, port: logstashPort, timeout: logstashTimeout, logActivity: logLogstashSocketActivity, allowUntrustedServer: allowUntrustedServer)
+            logstash = LogzIODestination(host: logstashHost, port: logstashPort, timeout: logstashTimeout, logActivity: logLogstashSocketActivity, allowUntrustedServer: allowUntrustedServer)
             logstash.logzioToken = logzioToken
             internalLogger.addDestination(logstash)
             
