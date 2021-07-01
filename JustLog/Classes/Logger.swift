@@ -20,7 +20,7 @@ public final class Logger: NSObject {
         case info
     }
     
-    public var logTypeKey = "log_type"
+    public var logTypeKey = "log_level"
     
     public var fileKey = "file"
     public var functionKey = "function"
